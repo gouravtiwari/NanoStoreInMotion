@@ -67,7 +67,7 @@ describe NanoStore::Model do
       user = User.create(:name => name, :age => age, :created_at => created_at)
       user.name.should == name
       user.age.should == age
-      user.created_at.should == created_at
+      user.created_at.to_s.should == created_at.to_s
     end
   end
 
